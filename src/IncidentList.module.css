@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.submitForm{
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 0 0 10px 10px;
+    background: rgba(19, 113, 82, 0.9);
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-style: italic;
+    align-items: center;
+    margin-top: 0;
+    border-top: aliceblue;
+}
+.input{
+    border-radius: 5px;
+  background-color: rgb(229, 251, 243);
+  border: 1px solid #137152;
+  padding: 8px 12px;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-style: italic;
+  color: #137152;
+  font-size: 16px;
+  outline: none;
+  /* transition: box-shadow 0.3s ease, border-color 0.3s ease; */
+
+}
+.selection{
+    padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #137152;
+  background-color: rgb(229, 251, 243);
+  font-family: "Ubuntu Condensed", sans-serif;
+  
+  font-style: italic;
+  color: #137152;
+  cursor: pointer;
+}
+.submitButton{
+    padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e80d0d;
+  color: aliceblue;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+.submitButton:hover {
+  background-color: #244f42;
+  transform: scale(1.05);
+}
+.darkCard{
+    background-color: rgb(60, 60, 60);
+    color:aliceblue;
+}
+

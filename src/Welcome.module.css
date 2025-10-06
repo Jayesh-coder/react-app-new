@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+.welcomePage{
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-style: italic;
+    
+}
+.welcomeText{
+    display: flex;
+    transition: 0.5s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+}
+.welcomeText:hover{
+    color: teal;
+    cursor: pointer;
+}
+.darkWelcome{
+    background-color: rgb(60, 60, 60);
+    color: aliceblue;
+}

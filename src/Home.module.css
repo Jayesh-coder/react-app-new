@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Dynalight&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dynalight&display=swap');
+.header{
+ /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=0d6f4f&c2=4031cc&gt=c&gd=dtr
+*/
+    background: #0D6F4F;
+    background: conic-gradient(from 45deg, #0D6F4F, #4031CC);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    color: aliceblue;
+    padding: 0px 5% 0px 5%;
+    font-size: 150%;
+    /* font-family: "Roboto Condensed", sans-serif; */
+    font-family: "Dynalight", cursive;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    background-color: rgb(229, 251, 243);
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    /* font-weight: bold; */
+}
+
+.navBar a{
+    text-decoration: none;
+    color:aliceblue;
+    transition: 0.5s ease-in-out;
+}
+.navBar a:hover{
+    color:rgb(236, 98, 98);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.rightSide{
+    display: flex;
+    gap: 25px;
+}
+.button{
+    background: linear-gradient(135deg, #4031CC, #0D6F4F);
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.darkButton{
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+}

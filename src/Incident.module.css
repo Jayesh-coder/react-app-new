@@ -1,0 +1,43 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dynalight&display=swap');
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    max-width: 30%;
+    border-radius: 10px;
+    font-family: "Ubuntu Condensed", sans-serif;
+    /* font-size: 150%; */
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=c6eee1&c2=bfbaef&gt=r&gd=dtr
+*/
+    
+    background: rgba(255,255,255,0.5); 
+    backdrop-filter: blur(10px);
+    font-style:italic;
+    padding: 10px;
+    transition: 0.5s ease-in-out;
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+.deleteButton{
+    background-color: teal;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: aliceblue;
+    font-family: "Dynalight", cursive;
+    font-size: large;
+    transition: 0.5s ease-in-out;   
+}
+.deleteButton:hover{
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
