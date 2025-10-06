@@ -12,6 +12,8 @@ function Home({ toggleDarkMode }) {
                 return [action.payload, ...state];
             case 'sub':
                 return state.filter(prev => prev.incident_id !== action.payload);
+            case 'edit':
+                return state.map((prev)=>prev.incident_id===action.payload.incident_id?{...action.payload}:prev);
             default:
                 return state;
         }
@@ -35,6 +37,9 @@ function Home({ toggleDarkMode }) {
         // setIncidents((prev)=>[incident, ...prev]);
         dispatch({ type: 'add', payload: incident });
     }
+    function handleEdit(incident){
+        dispatch({type:'edit', payload:incident});
+    }
     
     return (
         <>
@@ -51,7 +56,7 @@ function Home({ toggleDarkMode }) {
             {/* {(PageContent === 'Home') ? <Welcome /> : <IncidentList incidents={Incidents} onDelete={handleDelete} onSave={handleSave} />} */}
             <Routes>
                 <Route path='/' element={<Welcome />}/>
-                <Route path='/incidents' element={<IncidentList incidents={Incidents} onDelete={handleDelete} onSave={handleSave}/>}/>
+                <Route path='/incidents' element={<IncidentList incidents={Incidents} onDelete={handleDelete} onSave={handleSave} onEdit={handleEdit}/>}/>
             </Routes>
         </>
     )

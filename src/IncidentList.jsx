@@ -2,8 +2,9 @@ import Incident from "./Incident";
 import styles from "./IncidentList.module.css";
 import { useState, useContext } from "react";
 import { ThemeContext } from "./ThemeContext.js";
-function IncidentList({ incidents, onDelete, onSave }) {
+function IncidentList({ incidents, onDelete, onSave, onEdit }) {
     const theme = useContext(ThemeContext);
+    const [update, setUpdate] = useState(false);
     const [form, setForm] = useState({
         incident_id: '',
         priority: 'low',
@@ -20,6 +21,25 @@ function IncidentList({ incidents, onDelete, onSave }) {
     function handleSubmit(e) {
         e.preventDefault();
         onSave(form);
+    }
+    function handleEditForm(incident){
+        setForm(
+            {
+                incident_id: incident.incident_id,
+                priority: incident.priority,
+                severity: incident.severity,
+                status: incident.status
+            }
+            
+        );
+        setUpdate(true);
+        // onDelete(incident.incident_id);
+        // onSave(form);
+    }
+    function handleEdit(e){
+        // e.preventDefault();
+        onEdit(form);
+        setUpdate(false);
     }
     return (
         <>
@@ -49,11 +69,13 @@ function IncidentList({ incidents, onDelete, onSave }) {
                             <option value="on-hold">On Hold</option>
                             <option value="closed">Closed</option>
                         </select>
-                        <button type="submit" className={styles.submitButton}>SAVE</button>
+                        <button type="submit" className={`${styles.submitButton} ${update?styles.buttonHidden:''}`}>SAVE</button>
+                        <button type="button" className={`${!update?styles.buttonHidden:''} ${styles.submitButton}`} onClick={handleEdit}>Update</button>    
                     </form>
+                    
                 </div>
                 <div className={`${styles.cards}`}>
-                    {incidents.map((incident) => <Incident key={incident.incident_id} incident={incident} onDelete={() => onDelete(incident.incident_id)}></Incident>)}
+                    {incidents.map((incident) => <Incident key={incident.incident_id} incident={incident} onDelete={() => onDelete(incident.incident_id)} onEdit={()=>handleEditForm(incident)}></Incident>)}
                 </div>
                 {/* <Incident props={props}/> */}
             </div>
